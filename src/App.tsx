@@ -1,16 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import { Button } from 'antd'
+import AppMain from '../src/layout/AppMain'
+import AppHeader from '../src/layout/AppHeader'
+import AppSider from '../src/layout/AppSider'
 
 function App() {
 
   return (
     <>
-      <div>
-        <Button type="primary">Button</Button>
-        <div className='text-[20px]'>哈哈哈哈</div>
+      <div className='w-full h-full'>
+      <AppHeader></AppHeader>
+        <div className='flex h-full'>
+            <AppSider></AppSider>
+          <div  className="flex-1 w-full h-full">
+            <AppMain></AppMain>
+          </div>
+        </div>
       </div>
     </>
   )
